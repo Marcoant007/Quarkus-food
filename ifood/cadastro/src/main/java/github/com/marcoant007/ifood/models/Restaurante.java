@@ -2,21 +2,24 @@ package github.com.marcoant007.ifood.models;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 @Entity
+@DynamicUpdate
 @Table(name = "restaurante")
-public class Restaurante extends PanacheEntityBase {
+public class Restaurante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +31,7 @@ public class Restaurante extends PanacheEntityBase {
 
     public String nome;
 
-    @ManyToOne
+    @OneToOne(mappedBy = "restaurante", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     public Localizacao localizacao;
 
     @CreationTimestamp
@@ -36,6 +39,5 @@ public class Restaurante extends PanacheEntityBase {
 
     @UpdateTimestamp
     public Date dataAtualizacao;
-
     
 }
