@@ -2,6 +2,7 @@ package github.com.marcoant007.ifood.models;
 
 import java.math.BigDecimal;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,11 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
+@DynamicUpdate
 @Table(name = "pedido")
-public class Pedidos extends PanacheEntityBase {
+public class Pedido {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +25,7 @@ public class Pedidos extends PanacheEntityBase {
 
     public String descricao;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     public Restaurante restaurante;
 
     public BigDecimal preco;
