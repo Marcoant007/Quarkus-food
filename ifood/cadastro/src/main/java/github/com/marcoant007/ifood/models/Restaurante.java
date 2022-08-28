@@ -23,21 +23,77 @@ public class Restaurante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    private Integer id;
 
-    public String proprietario;
+    private String proprietario;
 
-    public String cnpj;
+    private String cnpj;
 
-    public String nome;
+    private String nome;
 
     @OneToOne(mappedBy = "restaurante", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    public Localizacao localizacao;
+    private Localizacao localizacao;
 
     @CreationTimestamp
-    public Date dataCriacao;
+    private Date dataCriacao;
 
     @UpdateTimestamp
-    public Date dataAtualizacao;
-    
+    private Date dataAtualizacao;
+
+
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getProprietario() {
+        return this.proprietario;
+    }
+
+    public void setProprietario(String proprietario) {
+        this.proprietario = proprietario;
+    }
+
+    public String getCnpj() {
+        return this.cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Localizacao getLocalizacao() {
+        return this.localizacao;
+    }
+
+    public void setLocalizacao(Localizacao localizacao) {
+        this.localizacao = localizacao;
+    }
+
+    public Date getDataCriacao() {
+        return this.dataCriacao;
+    }
+
+    public void setDataCriacao(Date dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public Date getDataAtualizacao() {
+        return this.dataAtualizacao;
+    }
+
+    public void setDataAtualizacao(Date dataAtualizacao) {
+        this.dataAtualizacao = dataAtualizacao;
+    }
 }

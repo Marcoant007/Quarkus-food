@@ -18,14 +18,46 @@ public class Localizacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    private Integer id;
 
-    public Double latitude;
+    private Double latitude;
 
-    public Double longitude;
+    private Double longitude;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "restaurante_id")
     private Restaurante restaurante;
 
+
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Double getLatitude() {
+        return this.latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return this.longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Restaurante getRestaurante() {
+        return this.restaurante;
+    }
+
+    public void setRestaurante(Restaurante restaurante) {
+        this.restaurante = restaurante;
+    }
 }

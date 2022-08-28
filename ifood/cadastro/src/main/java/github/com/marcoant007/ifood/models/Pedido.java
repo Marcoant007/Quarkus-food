@@ -19,14 +19,55 @@ public class Pedido {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    private Integer id;
 
-    public String nome;
+    private String nome;
 
-    public String descricao;
+    private String descricao;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    public Restaurante restaurante;
+    private Restaurante restaurante;
 
-    public BigDecimal preco;
+    private BigDecimal preco;
+
+
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return this.descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public Restaurante getRestaurante() {
+        return this.restaurante;
+    }
+
+    public void setRestaurante(Restaurante restaurante) {
+        this.restaurante = restaurante;
+    }
+
+    public BigDecimal getPreco() {
+        return this.preco;
+    }
+
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
+    }
 }
