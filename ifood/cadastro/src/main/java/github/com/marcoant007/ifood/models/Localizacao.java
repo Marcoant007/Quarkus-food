@@ -11,6 +11,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @DynamicUpdate
 @Table(name = "localizacao")
@@ -24,6 +26,7 @@ public class Localizacao {
 
     private Double longitude;
 
+    @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "restaurante_id")
     private Restaurante restaurante;
