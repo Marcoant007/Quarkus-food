@@ -29,9 +29,8 @@ public class RestauranteService {
 
     @Transactional
     public Restaurante createRestaurante(Restaurante restauranteDTO) {
+        restauranteDTO.getLocalizacao().setRestaurante(restauranteDTO);
         restauranteRepository.persist(restauranteDTO);
-        Localizacao localizacao = restauranteDTO.getLocalizacao();
-        localizacaoRepository.persist(localizacao);
         return restauranteDTO;
     }
 
