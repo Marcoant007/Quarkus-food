@@ -36,7 +36,7 @@ public class RestauranteService {
     }
 
     @Transactional
-    public Restaurante atualizarRestaurante(Integer id, Restaurante restauranteDTO) {
+    public Restaurante atualizarRestaurante(Long id, Restaurante restauranteDTO) {
         Optional<Restaurante> restauranteOP =  restauranteRepository.findByIdOptional(id);
         if(restauranteOP.isEmpty()){
             throw new NotFoundException();
@@ -48,14 +48,14 @@ public class RestauranteService {
     }
 
     @Transactional
-    public void deletedRestaurante(Integer id) {
+    public void deletedRestaurante(Long id) {
         Optional<Restaurante> restauranteOp = restauranteRepository.findByIdOptional(id);
         restauranteOp.ifPresentOrElse(restauranteRepository ::delete, () -> {
             throw new NotFoundException();
         });
     }
 
-    public Restaurante findRestauranteById(Integer id) {
+    public Restaurante findRestauranteById(Long id) {
         Optional<Restaurante> restauranteOp = restauranteRepository.findByIdOptional(id);
         if(restauranteOp.isEmpty()){
             throw new NotFoundException();

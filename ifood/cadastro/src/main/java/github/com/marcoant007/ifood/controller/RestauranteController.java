@@ -32,7 +32,7 @@ public class RestauranteController {
 
     @GET
     @Path("{id}")
-    public Restaurante findRestaurantebyId(@PathParam("id") Integer id){
+    public Restaurante findRestaurantebyId(@PathParam("id") Long id){
         return restauranteService.findRestauranteById(id);
     }
 
@@ -44,14 +44,14 @@ public class RestauranteController {
 
     @PUT
     @Path("{id}")
-    public ResponseBuilder atualizarRestaurante(@PathParam("id") Integer id, Restaurante restauranteDTO){
+    public ResponseBuilder atualizarRestaurante(@PathParam("id") Long id, Restaurante restauranteDTO){
         Restaurante restaurante = restauranteService.atualizarRestaurante(id, restauranteDTO);
         return Response.status(Status.CREATED).entity(restaurante);
     }
 
     @PUT
     @Path("{id}")
-    public Response deleteRestaurante(@PathParam("id") Integer id){
+    public Response deleteRestaurante(@PathParam("id") Long id){
         restauranteService.deletedRestaurante(id);
         return Response.status(Status.CREATED).build();
     }
