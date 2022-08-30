@@ -20,7 +20,7 @@ public class Localizacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private Double latitude;
 
@@ -32,11 +32,11 @@ public class Localizacao {
     private Restaurante restaurante;
 
 
-    public Long getId() {
+    public Integer getId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
