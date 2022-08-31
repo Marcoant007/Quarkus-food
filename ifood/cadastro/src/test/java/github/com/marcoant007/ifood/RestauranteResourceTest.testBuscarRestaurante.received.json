@@ -1,0 +1,157 @@
+[
+  {
+    "id": 3,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-27T17:32:00.784+00:00",
+    "dataAtualizacao": "2022-08-27T17:32:00.784+00:00"
+  },
+  {
+    "id": 4,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-27T17:32:01.625+00:00",
+    "dataAtualizacao": "2022-08-27T17:32:01.625+00:00"
+  },
+  {
+    "id": 5,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-28T20:01:29.745+00:00",
+    "dataAtualizacao": "2022-08-28T20:01:29.745+00:00"
+  },
+  {
+    "id": 6,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-28T20:11:09.818+00:00",
+    "dataAtualizacao": "2022-08-28T20:11:09.818+00:00"
+  },
+  {
+    "id": 7,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-28T20:12:12.923+00:00",
+    "dataAtualizacao": "2022-08-28T20:12:12.923+00:00"
+  },
+  {
+    "id": 8,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-28T20:12:13.782+00:00",
+    "dataAtualizacao": "2022-08-28T20:12:13.782+00:00"
+  },
+  {
+    "id": 9,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-28T20:12:13.946+00:00",
+    "dataAtualizacao": "2022-08-28T20:12:13.946+00:00"
+  },
+  {
+    "id": 10,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "dataCriacao": "2022-08-28T20:12:14.143+00:00",
+    "dataAtualizacao": "2022-08-28T20:12:14.143+00:00"
+  },
+  {
+    "id": 11,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "localizacao": {
+      "id": 10,
+      "latitude": 1.2321312E7,
+      "longitude": 1232131.0
+    },
+    "dataCriacao": "2022-08-29T23:05:27.709+00:00",
+    "dataAtualizacao": "2022-08-29T23:05:27.709+00:00"
+  },
+  {
+    "id": 12,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "localizacao": {
+      "id": 11,
+      "latitude": 1.2321312E7,
+      "longitude": 1232131.0
+    },
+    "dataCriacao": "2022-08-29T23:07:27.635+00:00",
+    "dataAtualizacao": "2022-08-29T23:07:27.635+00:00"
+  },
+  {
+    "id": 13,
+    "proprietario": "string",
+    "cnpj": "string",
+    "nome": "string",
+    "localizacao": {
+      "id": 12,
+      "latitude": 0.0,
+      "longitude": 0.0
+    },
+    "dataCriacao": "2022-08-29T23:08:01.483+00:00",
+    "dataAtualizacao": "2022-08-29T23:08:01.483+00:00"
+  },
+  {
+    "id": 14,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "localizacao": {
+      "id": 13,
+      "latitude": 1.2321312E7,
+      "longitude": 1232131.0
+    },
+    "dataCriacao": "2022-08-29T23:10:41.250+00:00",
+    "dataAtualizacao": "2022-08-29T23:10:41.249+00:00"
+  },
+  {
+    "id": 15,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "localizacao": {
+      "id": 14,
+      "latitude": 1.2321312E7,
+      "longitude": 1232131.0
+    },
+    "dataCriacao": "2022-08-29T23:16:03.990+00:00",
+    "dataAtualizacao": "2022-08-29T23:16:03.990+00:00"
+  },
+  {
+    "id": 16,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "localizacao": {
+      "id": 15,
+      "latitude": 1.2321312E7,
+      "longitude": 1232131.0
+    },
+    "dataCriacao": "2022-08-29T23:20:50.373+00:00",
+    "dataAtualizacao": "2022-08-29T23:20:50.373+00:00"
+  },
+  {
+    "id": 17,
+    "proprietario": "Marco Antonio",
+    "cnpj": "17816783752",
+    "nome": "Pauzada Lanches",
+    "localizacao": {
+      "id": 16,
+      "latitude": 1.2321312E7,
+      "longitude": 1232131.0
+    },
+    "dataCriacao": "2022-08-29T23:24:02.931+00:00",
+    "dataAtualizacao": "2022-08-29T23:24:02.931+00:00"
+  }
+]
