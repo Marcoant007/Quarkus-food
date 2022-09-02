@@ -8,7 +8,6 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager;
 
 public class CadastroTestLifecycleManager  implements QuarkusTestResourceLifecycleManager {
-
     public static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:12.2");
 
     @Override
