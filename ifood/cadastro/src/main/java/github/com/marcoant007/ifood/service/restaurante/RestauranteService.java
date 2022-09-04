@@ -8,7 +8,6 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.NotFoundException;
 
-import github.com.marcoant007.ifood.models.Localizacao;
 import github.com.marcoant007.ifood.models.Pedido;
 import github.com.marcoant007.ifood.models.Restaurante;
 import github.com.marcoant007.ifood.repository.LocalizacaoRepository;

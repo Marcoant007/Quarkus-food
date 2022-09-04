@@ -33,6 +33,8 @@ public class Restaurante {
 
     private String nome;
 
+    private String nomeFantasia;
+
     @OneToOne(mappedBy = "restaurante", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Localizacao localizacao;
 
@@ -98,4 +100,14 @@ public class Restaurante {
     public void setDataAtualizacao(Date dataAtualizacao) {
         this.dataAtualizacao = dataAtualizacao;
     }
+
+
+    public String getNomeFantasia() {
+        return this.nomeFantasia;
+    }
+
+    public void setNomeFantasia(String nomeFantasia) {
+        this.nomeFantasia = nomeFantasia;
+    }
+
 }

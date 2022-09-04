@@ -15,6 +15,7 @@
     <quarkus.platform.version>2.11.2.Final</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+    <org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -75,7 +76,31 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Database Rider -->
+    <!-- FIM Database Rider -->
+
+    <!-- MAP STRUCT -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>1.3.1.Final</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.3.1.Final</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.modelmapper</groupId>
+      <artifactId>modelmapper</artifactId>
+      <version>2.3.9</version>
+    </dependency>
+    <!-- FIM MAPSTRUCT -->
+
+
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy</artifactId>
@@ -166,6 +191,35 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+            <annotationProcessorPaths>
+                <path>
+                    <groupId>org.mapstruct</groupId>
+                    <artifactId>mapstruct-processor</artifactId>
+                    <version>${org.mapstruct.version}</version>
+                </path>
+            </annotationProcessorPaths>
+            <!-- due to problem in maven-compiler-plugin, for verbose mode add showWarnings -->
+            <showWarnings>true</showWarnings>
+            <compilerArgs>
+                <arg>
+                    -Amapstruct.suppressGeneratorTimestamp=true
+                </arg>
+                <arg>
+                    -Amapstruct.suppressGeneratorVersionInfoComment=true
+                </arg>
+                <arg>
+                    -Amapstruct.verbose=true
+                </arg>
+            </compilerArgs>
+        </configuration>
+    </plugin>
     </plugins>
   </build>
   <profiles>
